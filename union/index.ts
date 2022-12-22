@@ -31,3 +31,18 @@ const calTax = (price: number | string, tax: number) => {
   }
   return price * tax;
 };
+
+// Union Types for Arrays
+const stuff: (string | number)[] = ["a", 3]
+
+// Literal Types with Union
+let zero: 0 = 0;
+let hi: "hi" = "hi";
+
+let mood: "Happy" | "Sad" = "Happy";
+mood = "Sad";
+
+type DayOfWeek = "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" ;
+
+let today: DayOfWeek = "Monday";
+

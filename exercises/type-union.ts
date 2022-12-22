@@ -1,6 +1,6 @@
 // Part 1
 // Create a variable called highScore that can be a number OR a boolean
-let highScore: number | boolean = 4720;
+let highScore: number | boolean;
 
 // Part 2
 // Create an array called stuff
@@ -12,7 +12,6 @@ const stuff: number[] | string[] = [];
 // Create an array called SkillLevel
 // There are 4 allowed values: "Beginner", "Intermediate", "Advanced" and "Expert"
 type Levels = "Beginner" | "Intermediate" | "Advanced" | "Expert";
-const skillLevel: Levels[] = [];
 
 // Part 4
 // Create a type called SkiSchoolStudent
@@ -61,12 +60,15 @@ colors.push({ h: 1, s: 2, l: 3 });
 // Write a function called greet that accepts a single string or an array of strings
 // It should print "Hello, <name>!" for that single person or greet each poerson in the array with the same format;
 
-const greet = (name: string | string[]): void => {
-  if (typeof name !== "string") {
-    for (let person of name) {
-      console.log(`Hello ${person}!`);
+const greet = (person: string | string[]): void => {
+  if (typeof person !== "string") {
+    for (let name of person) {
+      console.log(`Hello ${name}!`);
     }
   } else {
-    console.log(`Hello ${name}!`);
+    console.log(`Hello ${person}!`);
   }
 };
+
+greet("Sam");
+greet(["Sam", "John", "Joe", "Cassie"]);

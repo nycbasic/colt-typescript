@@ -1,2 +1,1 @@
-const btn = document.getElementById("btn")
-console.log(btn);
+const btn: HTMLElement | null = document.getElementById("btn");

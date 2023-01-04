@@ -110,12 +110,12 @@ const pierre: Engineer = {
 // Interfaces can only describe the shape of an object, cannot use an interface to descibe literal types.
 type Color = "red" | "blue" | "green" // <- interfaces cannot do this.
 // Interfaces can re-open interfaces to add additional properties, types cannot
-type Chicken = {
-  breed: string
-}
-type Chicken {
-  numEggs: number
-}
+// type Chicken = {
+//   breed: string
+// }
+// type Chicken {
+//   numEggs: number
+// }
 
 // Interfaces can use OOP concepts such as extending properties
 // When describing types, use type alias, when creating object types use interfaces.

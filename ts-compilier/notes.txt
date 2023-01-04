@@ -1,0 +1,11 @@
+TS Commands
+     - tsc --init = creates a tsconfig.json file which has all the ts settings
+     - tsc --w = Allows you to watch the ts file to view the errors in your terminal
+     - tsc = Will find all the typescript files in the directory and compile any of them located in the current directory
+     - set files json property in ts-config = setting specific files to only be compilied to js.
+     - include/exclude = Can be used to include or exclude files to be compiled in specific directories.
+          - excludes will default exclude the specific directories, for instance for node, it will exclude the node_modules
+     - outDir - sets the compile directory for the ts files.
+     - target - sets the version of js to compile to.
+     - strict - enables additional type checks
+    

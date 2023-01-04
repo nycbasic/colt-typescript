@@ -48,14 +48,14 @@ const shoes: Products = {
 
 // Adding new properties: Re-opening
 interface Dog {
-  name: string,
-  age: number
+  name: string;
+  age: number;
 }
 
 // Re-opening: Unique to Interfaces
 interface Dog {
-  breed: string,
-  bark(): string
+  breed: string;
+  bark(): string;
 }
 
 const elton: Dog = {
@@ -63,8 +63,21 @@ const elton: Dog = {
   age: 0.5,
   breed: "Australian Shepherd",
   bark() {
-    return "Woof Woof!"
-  }
+    return "Woof Woof!";
+  },
+};
+
+// Extending interfaces - works like object inheritance
+interface ServiceDog extends Dog {
+  job: "drug sniffer" | "bomb" | "guide dog";
 }
 
-// Extending interfaces
+const chewy: ServiceDog = {
+  name: "Chewy",
+  age: 4.5,
+  breed: "Lab",
+  bark() {
+    return "Woof Woof!";
+  },
+  job: "guide dog",
+};

@@ -27,7 +27,7 @@ type Product = {
 // It should return the sum of all the products prices
 
 const getTotal = (products: Product[]): number => {
-  let total: number = 0;
+  let total = 0;
   for (let item of products) {
     total += item.price;
   }

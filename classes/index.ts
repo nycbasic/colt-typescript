@@ -1,18 +1,18 @@
 class Player {
-  public readonly first: string;
-  public readonly last: string;
-// class fields in TS is as is and does not need a type annotation
-  private score = 0;
-  constructor(first: string, last: string) {
-    this.first = first;
-    this.last = last;
+  // class fields in TS is as is and does not need a type annotation
+  // private score = 0;
+  constructor(
+    public first: string,
+    public last: string,
+    private score: number
+  ) {
     this.secretMethod();
   }
 
-  private secretMethod():void {
-    console.log("secret method!")
+  private secretMethod(): void {
+    console.log("secret method!");
   }
 }
 
 const elton = new Player("Elton", "Steele");
-elton.secretMethod()
+elton.secretMethod();

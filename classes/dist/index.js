@@ -1,20 +1,38 @@
 "use strict";
-class Bike {
-    constructor(color) {
-        this.color = color;
+// interface Colorful {
+//   color: string;
+// }
+// interface Printable {
+//   print(): void;
+// }
+// class Bike implements Colorful {
+//   constructor(public color: string) {}
+// }
+// class Jacket implements Colorful, Printable {
+//   constructor(public brand: string, public color: string) {}
+//   print(): void {
+//     console.log(`${this.color}, ${this.brand}`)
+//   }
+// }
+// const bike1 = new Bike("red");
+// const jacket1 = new Jacket("Prada", "black");
+class Employee {
+    // will not allow you to instantiate a class unless it fufills certain requirements
+    constructor(first, last) {
+        this.first = first;
+        this.last = last;
     }
 }
-class Jacket {
-    constructor(brand, color) {
-        this.brand = brand;
-        this.color = color;
+// But can extend, but will require the method marked as static.
+class FullTimeEmployee extends Employee {
+    constructor(first, last, salary) {
+        super(first, last);
+        this.salary = salary;
     }
-    print() {
-        console.log(`${this.color}, ${this.brand}`);
+    getPay() {
+        return this.salary;
     }
 }
-const bike1 = new Bike("red");
-const jacket1 = new Jacket("Prada", "black");
 // class Player {
 //   // class fields in TS is as is and does not need a type annotation
 //   // private score = 0;

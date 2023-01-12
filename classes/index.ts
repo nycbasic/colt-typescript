@@ -1,24 +1,40 @@
-interface Colorful {
-  color: string;
+// interface Colorful {
+//   color: string;
+// }
+
+// interface Printable {
+//   print(): void;
+// }
+
+// class Bike implements Colorful {
+//   constructor(public color: string) {}
+// }
+
+// class Jacket implements Colorful, Printable {
+//   constructor(public brand: string, public color: string) {}
+//   print(): void {
+//     console.log(`${this.color}, ${this.brand}`)
+//   }
+// }
+
+// const bike1 = new Bike("red");
+// const jacket1 = new Jacket("Prada", "black");
+
+abstract class Employee {
+  // will not allow you to instantiate a class unless it fufills certain requirements
+  constructor(public first: string, public last: string) {}
+  abstract getPay(): number;
 }
 
-interface Printable {
-  print(): void;
-}
-
-class Bike implements Colorful {
-  constructor(public color: string) {}
-}
-
-class Jacket implements Colorful, Printable {
-  constructor(public brand: string, public color: string) {}
-  print(): void {
-    console.log(`${this.color}, ${this.brand}`)
+// But can extend, but will require the method marked as static.
+class FullTimeEmployee extends Employee {
+  constructor(first: string, last: string, private salary: number) {
+    super(first, last);
+  }
+  getPay() {
+    return this.salary;
   }
 }
-
-const bike1 = new Bike("red");
-const jacket1 = new Jacket("Prada", "black");
 
 // class Player {
 //   // class fields in TS is as is and does not need a type annotation

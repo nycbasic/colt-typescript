@@ -4,7 +4,8 @@ class Player {
   constructor(
     public first: string,
     public last: string,
-    private _score: number
+    // private _score: number // private only stays within the class and does not extend or inherits
+    protected _score: number // protected passes to child classes with extends and pass inhertitance
   ) {
     this.secretMethod();
   }
@@ -26,6 +27,14 @@ class Player {
       throw new Error("Score cannot be negative")
     }
     this._score = newScore;
+  }
+}
+
+class SuperPlayer extends Player {
+  public isAdmin: boolean = true;
+
+  maxScore() {
+    this._score = 999999
   }
 }
 

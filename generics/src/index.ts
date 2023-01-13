@@ -40,3 +40,11 @@ function genericIdentity<T>(item: T): T {
 
 // genericIdentity<number>()
 console.log(genericIdentity<string>("sup"));
+
+// additional generic function for list/arrays
+function getRandomElement<T>(list: T[]): T {
+    const randIdx = Math.floor(Math.random() * list.length)
+    return list[randIdx];
+}
+
+console.log(getRandomElement<string>(["asdfasdf", "d", "tasdfas"]))

@@ -31,3 +31,9 @@ function genericIdentity(item) {
 }
 // genericIdentity<number>()
 console.log(genericIdentity("sup"));
+// additional generic function for list/arrays
+function getRandomElement(list) {
+    const randIdx = Math.floor(Math.random() * list.length);
+    return list[randIdx];
+}
+console.log(getRandomElement(["asdfasdf", "d", "tasdfas"]));

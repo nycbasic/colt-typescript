@@ -13,6 +13,30 @@ const inputEl = document.querySelector<HTMLInputElement>("#username")!;
 const btn = document.querySelector<HTMLButtonElement>(".btn")!;
 console.dir(inputEl)
 inputEl.value = "Hacked!"
-btn.addEventListener('click', (e) => {
-    e.preventDefault();
-})
+
+
+// writing generics from scratch
+// type annotations
+function numIdentity(item: number):number {
+    return item;
+} 
+
+function stringIdentity(item: string): string {
+  return item;
+} 
+
+function booleanIdentity(item: boolean): boolean {
+  return item;
+}
+
+function identity(item: any): any {
+    return item;
+}
+
+// Generic - helps return any type without having to write seperate functions
+function genericIdentity<T>(item: T): T {
+    return item;
+}
+
+// genericIdentity<number>()
+console.log(genericIdentity<string>("sup"));

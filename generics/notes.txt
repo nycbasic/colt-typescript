@@ -1,0 +1,2 @@
+Generics
+- allows us to definite reusable functions or classes that can work with multiple types.

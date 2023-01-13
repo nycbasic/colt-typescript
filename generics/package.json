@@ -1,0 +1,12 @@
+{
+  "name": "generics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"tsc -w\" \"lite-server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

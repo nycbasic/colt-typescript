@@ -37,3 +37,4 @@ function getRandomElement(list) {
     return list[randIdx];
 }
 console.log(getRandomElement(["asdfasdf", "d", "tasdfas"]));
+console.log(getRandomElement([1, 2, 3, 4]));

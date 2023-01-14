@@ -48,3 +48,4 @@ function getRandomElement<T>(list: T[]): T {
 }
 
 console.log(getRandomElement<string>(["asdfasdf", "d", "tasdfas"]))
+console.log(getRandomElement([1,2,3,4]))

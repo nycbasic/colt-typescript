@@ -38,8 +38,8 @@ function genericIdentity<T>(item: T): T {
     return item;
 }
 
-// genericIdentity<number>()
-console.log(genericIdentity<string>("sup"));
+console.log(genericIdentity<number>(4));
+// console.log(genericIdentity<string>("sup"));
 
 // additional generic function for list/arrays
 function getRandomElement<T>(list: T[]): T {

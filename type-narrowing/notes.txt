@@ -1,0 +1,1 @@
+Type Narrowing - Allow us to define a types for situations where the type isn't so well defined for example type unions

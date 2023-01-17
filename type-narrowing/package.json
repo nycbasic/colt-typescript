@@ -1,0 +1,12 @@
+{
+  "name": "type-narrowing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"nodemon src/index.ts\" \"tsc -w\"",
+    "dev": "concurrently \"tsc -w\" \"lite-server\""
+  },
+  "author": "",
+  "license": "ISC"
+}

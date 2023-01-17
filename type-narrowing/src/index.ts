@@ -91,10 +91,52 @@ function isCat(animal: Cat | Dog): animal is Cat {
 }
 
 function makeNoise(animal: Cat | Dog): string {
-    if(isCat(animal)) {
-        animal
-        return "Meow"
-    } else {
-        animal
-    }
+  if (isCat(animal)) {
+    animal;
+    return "Meow";
+  } else {
+    animal;
+  }
+}
+
+// Discriminated Unions
+interface Rooster {
+  name: string;
+  weight: number;
+  age: number;
+  kind: "rooster"; // Setting to a literal type in an interface 
+}
+
+interface Cow {
+  name: string;
+  weight: number;
+  age: number;
+  kind: "cow";
+}
+
+interface Pig {
+  name: string;
+  weight: number;
+  age: number;
+  kind: "pig";
+}
+
+type FarmAnimal = Pig | Rooster | Cow;
+
+function getFarmAnimalSound(animal: FarmAnimal) {
+  switch (animal.kind) {
+    case "pig":
+      return "Oink!";
+    case "cow":
+      return "Mooo!";
+    case "rooster":
+      return "Caccaaadoodleddoooo!!";
+  }
+}
+
+const stevie: Rooster = {
+    name: "Stevie Chicks",
+    weight: 2,
+    age: 1.5,
+    kind: "rooster"
 }

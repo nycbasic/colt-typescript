@@ -104,7 +104,7 @@ interface Rooster {
   name: string;
   weight: number;
   age: number;
-  kind: "rooster"; // Setting to a literal type in an interface 
+  kind: "rooster"; // Setting to a literal type in an interface
 }
 
 interface Cow {
@@ -121,8 +121,27 @@ interface Pig {
   kind: "pig";
 }
 
-type FarmAnimal = Pig | Rooster | Cow;
+type FarmAnimal = Pig | Rooster | Cow | Sheep;
 
+// function getFarmAnimalSound(animal: FarmAnimal) {
+//   switch (animal.kind) {
+//     case "pig":
+//       return "Oink!";
+//     case "cow":
+//       return "Mooo!";
+//     case "rooster":
+//       return "Caccaaadoodleddoooo!!";
+//   }
+// }
+
+const stevie: Rooster = {
+  name: "Stevie Chicks",
+  weight: 2,
+  age: 1.5,
+  kind: "rooster",
+};
+
+// Exhaustiveness Checks with Never
 function getFarmAnimalSound(animal: FarmAnimal) {
   switch (animal.kind) {
     case "pig":
@@ -131,12 +150,18 @@ function getFarmAnimalSound(animal: FarmAnimal) {
       return "Mooo!";
     case "rooster":
       return "Caccaaadoodleddoooo!!";
+    case "sheep":
+      return "baaaa!";
+    default:
+      // We should never make it here if we handled all cases
+      const _exhaustiveCheck: never = animal;
+      return _exhaustiveCheck;
   }
 }
 
-const stevie: Rooster = {
-    name: "Stevie Chicks",
-    weight: 2,
-    age: 1.5,
-    kind: "rooster"
+interface Sheep {
+  name: string;
+  weight: number;
+  age: number;
+  kind: "sheep";
 }

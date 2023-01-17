@@ -74,6 +74,23 @@ function makeNoise(animal) {
         animal;
     }
 }
+// function getFarmAnimalSound(animal: FarmAnimal) {
+//   switch (animal.kind) {
+//     case "pig":
+//       return "Oink!";
+//     case "cow":
+//       return "Mooo!";
+//     case "rooster":
+//       return "Caccaaadoodleddoooo!!";
+//   }
+// }
+const stevie = {
+    name: "Stevie Chicks",
+    weight: 2,
+    age: 1.5,
+    kind: "rooster",
+};
+// Exhaustiveness Checks with Never
 function getFarmAnimalSound(animal) {
     switch (animal.kind) {
         case "pig":
@@ -82,11 +99,11 @@ function getFarmAnimalSound(animal) {
             return "Mooo!";
         case "rooster":
             return "Caccaaadoodleddoooo!!";
+        case "sheep":
+            return "baaaa!";
+        default:
+            // We should never make it here if we handled all cases
+            const _exhaustiveCheck = animal;
+            return _exhaustiveCheck;
     }
 }
-const stevie = {
-    name: "Stevie Chicks",
-    weight: 2,
-    age: 1.5,
-    kind: "rooster"
-};

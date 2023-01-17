@@ -38,3 +38,8 @@ function getRandomElement(list) {
 }
 console.log(getRandomElement(["asdfasdf", "d", "tasdfas"]));
 console.log(getRandomElement([1, 2, 3, 4]));
+// Generics with multiple types & adding type constraints
+function merge(obj1, obj2) {
+    return Object.assign(Object.assign({}, obj1), obj2);
+}
+const comboObj = merge({ name: "Colt" }, { pets: ["blue", "steele"] });

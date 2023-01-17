@@ -9,10 +9,10 @@ const colors: string[] = [];
 // Generic
 const colors2: Array<string> = [];
 
-const inputEl = document.querySelector<HTMLInputElement>("#username")!;
-const btn = document.querySelector<HTMLButtonElement>(".btn")!;
-console.dir(inputEl)
-inputEl.value = "Hacked!"
+// const inputEl = document.querySelector<HTMLInputElement>("#username")!;
+// const btn = document.querySelector<HTMLButtonElement>(".btn")!;
+// console.dir(inputEl)
+// inputEl.value = "Hacked!"
 
 
 // writing generics from scratch
@@ -50,8 +50,8 @@ function getRandomElement<T>(list: T[]): T {
 console.log(getRandomElement<string>(["asdfasdf", "d", "tasdfas"]))
 console.log(getRandomElement([1,2,3,4]))
 
-// Generics with multiple types
-function merge<T,U>(obj1: T, obj2: U) {
+// Generics with multiple types & adding type constraints
+function merge<T extends Object ,U extends Object>(obj1: T, obj2: U) {
   return {
     ...obj1,
     ...obj2
@@ -59,3 +59,12 @@ function merge<T,U>(obj1: T, obj2: U) {
 }
 
 const comboObj = merge({name: "Colt"}, {pets: ["blue", "steele"]})
+console.log(merge({name: "test"}, {double: "test2"}))
+
+interface Lengthy {
+  length: number
+}
+
+function printDoubleLength<T extends Lengthy>(thing: T) {
+  return thing.length * 2;
+}

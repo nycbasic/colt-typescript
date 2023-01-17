@@ -62,3 +62,15 @@ function printName(entity) {
     }
     entity;
 }
+function isCat(animal) {
+    return animal.numLives !== undefined;
+}
+function makeNoise(animal) {
+    if (isCat(animal)) {
+        animal;
+        return "Meow";
+    }
+    else {
+        animal;
+    }
+}

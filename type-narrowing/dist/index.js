@@ -71,7 +71,7 @@ function makeNoise(animal) {
         return "Meow";
     }
     else {
-        animal;
+        return "Bark";
     }
 }
 // function getFarmAnimalSound(animal: FarmAnimal) {

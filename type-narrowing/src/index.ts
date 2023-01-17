@@ -95,7 +95,7 @@ function makeNoise(animal: Cat | Dog): string {
     animal;
     return "Meow";
   } else {
-    animal;
+    return "Bark";
   }
 }
 

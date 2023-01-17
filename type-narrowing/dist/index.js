@@ -24,3 +24,10 @@ const printLetters = (word) => {
         console.log("Invalid String");
     }
 };
+// Equality Narrowing
+function someDemo(x, y) {
+    if (x === y) {
+        x.toUpperCase();
+    }
+}
+someDemo("3", 3);

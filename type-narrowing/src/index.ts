@@ -23,3 +23,12 @@ const printLetters = (word?: string) => {
         console.log("Invalid String")
     }
 }
+
+// Equality Narrowing
+function someDemo(x:string | number, y: string|boolean) {
+    if(x === y) {
+        x.toUpperCase();
+    }
+}
+
+someDemo("3", 3);

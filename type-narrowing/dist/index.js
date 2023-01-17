@@ -37,3 +37,28 @@ function getRunTime(media) {
     }
     return media.duration;
 }
+// Instanceof Narrowing
+function printFullDate(date) {
+    if (date instanceof Date) {
+        console.log(date.toUTCString());
+    }
+    else {
+        console.log(new Date(date).toUTCString());
+    }
+}
+class User {
+    constructor(username) {
+        this.username = username;
+    }
+}
+class Company {
+    constructor(name) {
+        this.name = name;
+    }
+}
+function printName(entity) {
+    if (entity instanceof User) {
+        entity;
+    }
+    entity;
+}

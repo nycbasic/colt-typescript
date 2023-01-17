@@ -1,0 +1,1 @@
+Type declaration - Are files that are created to have all your type declarations to use and ts reads from it.

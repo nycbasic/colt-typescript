@@ -68,3 +68,11 @@ interface Lengthy {
 function printDoubleLength<T extends Lengthy>(thing: T) {
   return thing.length * 2;
 }
+
+// Default Type parameters
+function makeEmptyArray<T = number>(): T[] {
+  return [];
+}
+
+const numss = makeEmptyArray();
+const bools = makeEmptyArray<boolean>();

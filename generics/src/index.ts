@@ -49,3 +49,13 @@ function getRandomElement<T>(list: T[]): T {
 
 console.log(getRandomElement<string>(["asdfasdf", "d", "tasdfas"]))
 console.log(getRandomElement([1,2,3,4]))
+
+// Generics with multiple types
+function merge<T,U>(obj1: T, obj2: U) {
+  return {
+    ...obj1,
+    ...obj2
+  }
+}
+
+const comboObj = merge({name: "Colt"}, {pets: ["blue", "steele"]})

@@ -31,4 +31,23 @@ function someDemo(x:string | number, y: string|boolean) {
     }
 }
 
-someDemo("3", 3);
+// Narrowing with The "in" operator
+interface Movie{
+    title: string
+    duration: number
+}
+
+interface TVshow {
+    title: string
+    numEpisodes: number
+    episodeDuration: number
+}
+
+
+function getRunTime(media: Movie | TVshow) {
+    if("numEpisodes" in media) {
+        const {numEpisodes, episodeDuration} = media;
+        return numEpisodes * episodeDuration;
+    }
+    return media.duration;
+}

@@ -30,4 +30,10 @@ function someDemo(x, y) {
         x.toUpperCase();
     }
 }
-someDemo("3", 3);
+function getRunTime(media) {
+    if ("numEpisodes" in media) {
+        const { numEpisodes, episodeDuration } = media;
+        return numEpisodes * episodeDuration;
+    }
+    return media.duration;
+}

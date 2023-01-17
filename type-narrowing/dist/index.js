@@ -6,3 +6,21 @@ function tripe(value) {
     }
     return value * 3;
 }
+// Truthiness Guards
+const el = document.getElementById("idk");
+if (el) {
+    el;
+}
+else {
+    el;
+}
+const printLetters = (word) => {
+    if (word) {
+        for (let char of word) {
+            console.log(char);
+        }
+    }
+    else {
+        console.log("Invalid String");
+    }
+};

@@ -1,7 +1,11 @@
 import React from "react";
 
-function Greeter(): JSX.Element {
-  return <h1>Hello!</h1>;
+interface Person {
+  person: string;
+}
+
+function Greeter({ person }: Person) {
+  return <h1>Hello, {person}!</h1>;
 }
 
 export default Greeter;
